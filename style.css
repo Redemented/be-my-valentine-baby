@@ -1,0 +1,73 @@
+body {
+    background-color: #ffeef2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Varela Round', sans-serif;
+    overflow: hidden; /* Prevents scrollbars from background hearts */
+    position: relative;
+}
+
+/* Ensures the main content sits above the background hearts */
+.container {
+    position: relative;
+    z-index: 10;
+}
+
+.screen { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.hidden { display: none; }
+.gif { width: 300px; border-radius: 20px; margin-bottom: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+
+h1 { color: #d63384; font-size: 2.2rem; margin-bottom: 25px; }
+
+button {
+    padding: 15px 40px;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: #ff4d6d;
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+    transition: transform 0.2s, background-color 0.2s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+button:hover { transform: scale(1.1); }
+#no-btn { background-color: #adb5bd; margin-left: 15px; }
+
+.letter-box {
+    background: white;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    max-width: 480px;
+    line-height: 1.8;
+    color: #d63384;
+    font-size: 1.3rem;
+    border: 4px dashed #ffb3c1;
+}
+
+/* --- Background Heart Styling --- */
+.heart-bg {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ff8fa3; /* Soft pink color */
+    opacity: 0.4; /* Makes them semi-transparent to blend */
+    transform: rotate(45deg);
+    z-index: 1; /* Sits behind the main container */
+    filter: blur(1px); /* Softens edges */
+}
+.heart-bg::before, .heart-bg::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ff8fa3;
+    border-radius: 50%;
+}
+.heart-bg::before { left: -10px; }
+.heart-bg::after { top: -10px; }

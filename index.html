@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine?</title>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="question-screen" class="screen">
+            <img src="first.png" alt="Cute Bunnies" class="gif">
+            <h1>Will you be my valentine?</h1>
+            <div class="buttons">
+                <button id="yes-btn">Yes</button>
+                <button id="no-btn">No</button>
+            </div>
+        </div>
+
+        <div id="thank-you-screen" class="screen hidden">
+            <img src="yes-cat.png" alt="Cat with flowers" class="gif">
+            <h1>RAHHH thank you mommy</h1>
+            <button id="for-you-btn">this is for you</button>
+        </div>
+
+        <div id="letter-screen" class="screen hidden">
+            <div class="letter-box">
+                <p>I love you so much baby, you make me the happiest person in the world and I’m so so proud of you for being the best girlfriend anyone could ever ask for. Thank you for being you and for coming into my life, I love you</p>
+            </div>
+        </div>
+
+        <div id="sad-screen" class="screen hidden">
+            <img src="no-bunny.png" alt="Sad bunny" class="gif">
+            <h1 id="sad-text">why will you even click this button</h1>
+            <button id="go-back-btn">go back</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
